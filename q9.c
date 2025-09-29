@@ -1,14 +1,20 @@
-#include<stdio.h>
-int main() {
-    float P, R, T, SI, CI;
-    printf("Enter the value of Priciple:");
-    scanf("%f", &P);
-    printf("Enter the value of Rate:");
-    scanf("%f", &R);
-    printf("Enter the value of Time:");
-    scanf("%f", &T);
-    SI=(P*R*T)/100;
-    CI=P*pow((1+R/100), T) -P;
-    printf("Simple intrest is: %f and Compound intrest is: %f" SI , CI);
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float p,r,t;
+    printf("enter the principle amount: ");
+    scanf("%f",&p);
+    printf("enter the rate of interest: ");
+    scanf("%f",&r);
+    printf("enter the time period: ");
+    scanf("%f",&t);
+     
+    float si=(p*r*t)/100;
+    printf("Simple Interst: %f\n",si);
+
+    float  ci=p*(pow((1+r/100),t) - 1);
+    printf("Compound Interest: %f",ci);
+
     return 0;
-    }
+}
